@@ -1,0 +1,47 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>editar-cliente</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Nome:</ion-label>	<!-- Inserindo Label -->
+      			 <!-- tipo texto--> 				 <!--model tras todas as informações dos clientes -->
+      <ion-input type="text" name="nome" [(ngModel)]="model.nome"></ion-input> <!--Input para receber texto -->
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Telefone:</ion-label>
+        		 <!--tipo telefone --> 				 <!--recupera telefone -->
+        <ion-input type="tel" name="tel" [(ngModel)]="model.tel"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+          <ion-label stacked>Data Nascimento:</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" name="data" [(ngModel)]="model.data"></ion-datetime>
+        </ion-item>
+
+
+        <ion-item>
+        	 <!--Check box checando se esta ativo -->
+            <ion-label>Ativo:</ion-label>
+            <ion-checkbox  name="ativo" [(ngModel)]="model.ativo"></ion-checkbox>
+          </ion-item>
+
+
+          
+         
+
+  </ion-list>
+	 <!--Botão para salvar-->
+  <button ion-button block (click)="save()">Salvar</button>
+  
+</ion-content>
